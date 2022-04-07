@@ -1,4 +1,4 @@
 telebot
 config
 requests
-BeautifulSoup
+beautifulsoup4
