@@ -1,5 +1,4 @@
 telebot
 config
 requests
-time
 BeautifulSoup
