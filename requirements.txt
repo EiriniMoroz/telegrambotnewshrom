@@ -2,3 +2,4 @@ telebot
 config
 requests
 beautifulsoup4
+pyTelegramBotAPI==4.4.0
