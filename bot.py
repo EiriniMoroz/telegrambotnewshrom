@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 
 bot = telebot.TeleBot(config.TOKEN)
 
-BOT_URL = "https://git.heroku.com/telegrambothromadske.git"
 
 @bot.message_handler(content_types=['text'])
 def commands(message):
