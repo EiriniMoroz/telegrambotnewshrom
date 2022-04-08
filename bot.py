@@ -11,7 +11,7 @@ bot = telebot.TeleBot(config.TOKEN)
 @bot.message_handler(content_types=['text'])
 def commands(message):
 	if message.text == "/start":
-		bot.send_message(message.chat.id, "Добрий день!\nТепер ви отримуватимете новини з порталу Громадське\nОстання новина:")
+		bot.send_message(message.chat.id, "Добрий день!\nВідтепер ви отримуватимете новини з порталу Громадське\nОстання новина:")
 
 		
 		URL = "https://hromadske.ua/news"
