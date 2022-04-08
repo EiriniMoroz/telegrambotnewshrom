@@ -54,6 +54,7 @@ def parser(back_post_id):
 	text = post["data-vr-contentbox"]
 
 	if post_id != back_post_id:
+		#print("post_id " + post_id + "!= back_post_id " + back_post_id)
 		return f"{text}", post_id, post["data-vr-contentbox-url"]
 	else:
 		return None, post_id
