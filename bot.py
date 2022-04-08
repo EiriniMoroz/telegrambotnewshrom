@@ -11,7 +11,7 @@ bot = telebot.TeleBot(config.TOKEN)
 @bot.message_handler(content_types=['text'])
 def commands(message):
 	if message.text == "/start":
-		bot.send_message(message.chat.id, "Hello!\nNow you will get news from Hromadke.ua\nLast news:")
+		bot.send_message(message.chat.id, "Добрий день!\nТепер ви отримуватимете новини з порталу Громадське\nОстання новина:")
 
 		
 		URL = "https://hromadske.ua/news"
@@ -22,7 +22,7 @@ def commands(message):
 		post = soup.find("a", class_="NewsPublicationCard")
 		#print(post)
 		bot.send_message(message.chat.id, post["data-vr-contentbox"]+"\n--------------------------------------------------"
-			+"\nRead full peace of news here "+ "https://hromadske.ua"+post["data-vr-contentbox-url"])
+			+"\nЧитати новину повністю можна тут "+ "https://hromadske.ua"+post["data-vr-contentbox-url"])
 
 
 
@@ -35,7 +35,7 @@ def commands(message):
 
 			if post_text[0] != None:
 				bot.send_message(message.chat.id, (post_text[0]+"\n--------------------------------------------------"
-			+"\nRead full peace of news here "+ "https://hromadske.ua"+post_text[2]))
+			+"\nЧитати новину повністю можна тут "+ "https://hromadske.ua"+post_text[2]))
 				time.sleep(50)
 
 
@@ -59,4 +59,4 @@ def parser(back_post_id):
 		return None, post_id
 
 # RUN
-bot.polling()#none_stop=True)
+bot.polling()
