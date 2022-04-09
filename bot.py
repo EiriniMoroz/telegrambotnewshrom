@@ -60,4 +60,9 @@ def parser(back_post_id):
 		return None, post_id
 
 # RUN
-bot.polling()
+try:
+    bot.polling()
+
+except Exception as e:
+	print("Exception caught")
+    time.sleep(15)
